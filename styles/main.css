@@ -1,0 +1,72 @@
+:root{
+    --main-sky: #67a0b8;
+    --main-seaweed:  #3e5d6a;
+    --main-purple:  #796884;
+    --main-bone:  #f2ece8;
+    --main-ash: #241c15;
+    --main-ocean: #2b3342;
+    --main-sunset: #F2ba66;
+}
+body{
+    font-family: Helvetica, Roboto;
+    color: var(--main-ash);
+    background-color: var(--main-bone);
+    padding: 0;
+
+}
+
+h1{
+    color: var(--main-bone);
+}
+h2{
+    text-align: left;
+    color: var(--main-ocean);
+}
+article{
+    padding: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: left;
+}
+p{
+    font-size: 18px;
+}
+
+header{
+    padding: 20px;
+    text-align: center;
+    background-color: var(--main-ash);
+    font-size: 24px;
+}
+/*
+Horizontal Nav Bar
+*/
+ul.hnav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--main-seaweed);
+}
+li {
+    float: left;
+    border-right: 1px solid var(--main-ocean);
+}
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: var(--main-bone);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: var(--main-ash);
+  }
+.active{
+    background-color: var(--main-ocean);
+}
+
