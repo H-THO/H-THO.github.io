@@ -2,7 +2,7 @@
     --main-sky: #67a0b8;
     --main-seaweed:  #3e5d6a;
     --main-purple:  #796884;
-    --main-bone:  #f2ece8;
+    --main-bone:  #d2ccc8;
     --main-ash: #241c15;
     --main-ocean: #2b3342;
     --main-sunset: #F2ba66;
@@ -11,11 +11,12 @@ body{
     font-family: Helvetica, Roboto;
     color: var(--main-ash);
     background-color: var(--main-bone);
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 
 }
 h1{
-    color: var(--main-bone);
+    color: var(--main-ocean);
 }
 h2{
     text-align: left;
@@ -32,10 +33,14 @@ p{
 }
 /* Header Banner styles */
 header{
+    margin: 0;
     padding: 20px;
     text-align: center;
     background-color: var(--main-ash);
     background-image: url('../media/BannerToroa.png');
+    image-resolution: dpi;
+    width: 300;
+    height: 100;
     font-size: 24px;
 }
 .header-ocean{
