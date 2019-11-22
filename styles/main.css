@@ -35,7 +35,7 @@ header{
     padding: 20px;
     text-align: center;
     background-color: var(--main-ash);
-    background-image: url('../media/BannerToroa.jpg');
+    background-image: url('../media/BannerToroa.png');
     font-size: 24px;
 }
 .header-ocean{
