@@ -14,7 +14,6 @@ body{
     padding: 0;
 
 }
-
 h1{
     color: var(--main-bone);
 }
@@ -31,13 +30,18 @@ article{
 p{
     font-size: 18px;
 }
-
+/* Header Banner styles */
 header{
     padding: 20px;
     text-align: center;
     background-color: var(--main-ash);
+    background-image: url('../media/BannerToroa.jpg');
     font-size: 24px;
 }
+.header-ocean{
+    
+}
+
 /*
 Horizontal Nav Bar
 */
@@ -69,4 +73,6 @@ li a:hover {
 .active{
     background-color: var(--main-ocean);
 }
+
+
 
