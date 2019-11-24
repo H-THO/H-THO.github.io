@@ -11,26 +11,87 @@
     <header>
         <h1>Hywel Thomas</h1> 
     </header>
-    <nav>
+    <nav class="">
       <ul class="hnav">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="sprint1-technical.html">Sprint 1 Technical</a></li>
-        <li><a class="active" href="sprint2-technical.html">Sprint 2 Technical</a></li>
-        <li><a href="sprint2-core.html">Sprint 2 Core</a></li>
+        <li class="hnav"><a href="../index.html">Home</a></li>
+        <li class="hnav"><a href="sprint1-technical.html">Sprint 1 Technical</a></li>
+        <li class="hnav"><a class="active" href="sprint2-technical.html">Sprint 2 Technical</a></li>
+        <li class="hnav"><a href="sprint2-core.html">Sprint 2 Core</a></li>
         <ul>
     </nav>
     <main>
     <!-- Page Content -->
       <article>
-        <h2>
-          Sprint 2 Technical Blog
-        </h2> 
-        <p>
-            Spanish mackerel damselfish smoothtongue whitebait Arctic char blacktip reef shark lighthousefish. Torrent fish snailfish cookie-cutter shark redtooth triggerfish collared carpetshark Rasbora angelfish, pufferfish gianttail, Atlantic herring--trout-perch smelt Black tetra spadefish Redfin perch. Amago, "redmouth whalefish knifejaw New World rivuline alligatorfish dealfish banjo catfish; queen triggerfish, triggerfish tang."
+        <h2>CSS Classes and IDs</h2>
+        <h3></h3>
+        <h3>Class Selectors</h3>
+        <p>Class selectors allow us to specify css rules to be applied to HTML elements based on their element class. This allows us to access style rules use for commonly repeated styles or types of element within our website. 
         </p>
-      </article>
-      <aside>
+        <p>A simple way to think of classes and selectors would be as sets of templates that we can quickly deploy and reuse across our project.
+        This could be as simple as having a set font and color for setting highlighted text within a paragraph:</p>
+        <p>
+        Another way we can use class selectors is to define a class as a <em>subset</em> of an HTML element type:
+        </p>
+        
+        
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="H-THO" data-slug-hash="RwwmrgM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sprint-2-Blog">
+          <span>See the Pen <a href="https://codepen.io/H-THO/pen/RwwmrgM">
+          Sprint-2-Blog</a> by htho (<a href="https://codepen.io/H-THO">@H-THO</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+        <h3>ID Selectors</h3>
+        <p>
+        ID Selectors behave a little differently to classes. A class allows reusability, while an ID is unique. 
+        </p>
+        <ul>
+        <li>Each HTML element can only have one ID associated with it (while class selectors can select multiple classes).</li>
+        <li>Each web page can also have only one element with that specific ID.</li>
+        </ul>
+        <p>
+          If we use our code from the previous figure, but enclose it with a <strong>div</strong> with an ID selection we can see it overrides the styles applied to that element. We can also see that the children of the div element's class behaviour is set using class styles.
+        </p>
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="H-THO" data-slug-hash="YzzbwJL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sprint-2-ID Selector">
+          <span>See the Pen <a href="https://codepen.io/H-THO/pen/YzzbwJL">
+          Sprint-2-ID Selector</a> by htho (<a href="https://codepen.io/H-THO">@H-THO</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        <h3>ID Selectors and <em>Specificity</em></h3>
+        <p>
+        ID selectors become useful as they have <strong>High Specificity</strong>.
+        This means that they take precedence in the cascading behaviour of CSS. For an element that has both class and id rules applied to it will always have conflicting style rules dictated by the ID style rules.
+        </p>
+        
+        
+        
+        <h3>Best Practices: Using Class and ID Selectors</h3>
+        <p>
+        When creating the basic blog structure for this course I found myself mostly finding it best to use classes and class selectors. A bit of research on the web suggests a number of differing viewpoints on best practice, with some even opting to <a href="https://dev.to/clairecodes/reasons-not-to-use-ids-in-css-4ni4">not even use ID's at all.</a>
+        After reading a little <a href="https://stackoverflow.com/questions/298607/css-best-practice-about-id-and-class"> discussion of best practices in CSS ID/Class usage on Stack Overflow</a> I've come to appreciate that ID's only really have much utility to me as a way to manually override class behaviour for a single instance on a page, owing to their high specificity.</p> 
+        <p>The accepted answer of the discussion linked suggest that if there is <em class="purple"><strong></strong>"more than one element which requires the same style, now or at any time in the future"</strong></em>, then it should be implemented as a <strong>class</strong>.  
+        </p>
+        
+        <h3>References</h3>
+        <ul class="links-list">
+          <li><a href="https://www.htmldog.com/guides/css/intermediate/classid/">MDN web docs: Type, class and ID selectors</a></li> 
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">HTML Dog: Classes & ID Selectors</a><li>
+          <li><a href="https://css-tricks.com/the-difference-between-id-and-class/">CSS Tricks: The Difference Between ID and Class</a></li>
+          <li><a href="https://stackoverflow.com/questions/298607/css-best-practice-about-id-and-class">Stack Overflow: CSS Best Practices - ID and Class?</a></href>
+        </ul>
+        </article>
+      <aside>
+        <h1>
+          Extra-Curricular
+          </h1>
+          <p>Here's a few links that helped me with building the blog, and in tying the concepts relating back to practical class/ID usage</p>
+          <ul class="links-list">
+            <li><a href="https://marksheet.io/css-priority.html">Cascading behaviour in CSS - tips to avoid conflicts in your code</href></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Mozilla Developer Network web docs: Type, Class, and ID Selectors</href></li>
+            <li><a href="https://www.taniarascia.com/adding-syntax-highlighting-to-code-snippets/
+            ">Link</href>Using Gists, Codepens and Javascript for Syntax highlighting</li>
+          </ul>
       </aside>
     </main> 
     <footer>
