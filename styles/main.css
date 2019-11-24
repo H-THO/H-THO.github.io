@@ -8,7 +8,7 @@
     --main-sunset: #F2ba66;
 }
 body{
-    font-family: Helvetica, Roboto;
+    font-family: Montserrat, Helvetica, Roboto;
     color: var(--main-ash);
     background-color: var(--main-bone);
     margin: 0 !important;
@@ -16,20 +16,33 @@ body{
 
 }
 h1{
-    color: var(--main-ocean);
+    font-family: "Montserrat Thin"; 
+    color: var(--main-seaweed);
+    text-align: left;    
 }
 h2{
+    font-family: Montserrat, Roboto;
     text-align: left;
     color: var(--main-ocean);
 }
+h3{
+    color: var(--main-seaweed)
+}
 article{
     padding: 20px;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 80px;
+    margin-right: 80px;
     text-align: left;
 }
 p{
     font-size: 18px;
+    padding-bottom: 10px;
+}
+aside{
+    padding: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: var(--main-sky);
 }
 /* Header Banner styles */
 header{
@@ -43,10 +56,9 @@ header{
     height: 100;
     font-size: 24px;
 }
-.header-ocean{
-    
+em.purple{
+    color: var(--main-purple);
 }
-
 /*
 Horizontal Nav Bar
 */
@@ -57,27 +69,42 @@ ul.hnav{
     overflow: hidden;
     background-color: var(--main-seaweed);
 }
-li {
+li.hnav {
     float: left;
     border-right: 1px solid var(--main-ocean);
 }
-li:last-child {
+li.hnav:last-child {
     border-right: none;
 }
 
-li a {
+li.hnav a {
     display: block;
     color: var(--main-bone);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-li a:hover {
+li.hnav a:hover {
     background-color: var(--main-ash);
   }
 .active{
     background-color: var(--main-ocean);
 }
-
-
-
+pre {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+}
+ul.links-list{
+    list-style-type: none;
+    color: var(--main-seaweed);
+    text-align: left;
+    font-size: 24px;
+}
+/*
+  Media
+*/
+@font-face{
+    font-family: Josefin Sans;
+}
