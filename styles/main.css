@@ -96,15 +96,28 @@ pre {
   white-space: pre;
   margin: 1em 0;
 }
+/*Links List style*/
 ul.links-list{
     list-style-type: none;
-    color: var(--main-seaweed);
     text-align: left;
-    font-size: 24px;
+    font-size: 22px;
+}
+li.links-list a {
+    text-align: left;
+    text-decoration: none;
+}
+li.links-list a:visited{
+    color: var(--main-purple);
+}
+li.links-list a:hover{
+    color: var(--main-ocean);
+    cursor: pointer;
+    text-decoration: underLine;
 }
 /*
   Media
-*/
+
 @font-face{
     font-family: Josefin Sans;
 }
+*/
