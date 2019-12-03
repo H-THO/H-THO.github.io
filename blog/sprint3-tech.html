@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emotional Intelligence</title>
+    <meta charset="UTF-8">
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
+  </head>
+  
+  <body>
+    <!-- Header and horizontal nav bar -->
+    <header>
+        <h1>Hywel Thomas</h1> 
+    </header>
+    <nav>
+      <ul class="hnav">
+        <li class="hnav"><a href="../index.html">Home</a></li>
+        <li class="hnav"><a href="sprint1-core.html">Sprint 1 Core</a></li>
+        <li class="hnav"><a href="sprint2-tech.html">Sprint 2 Tech</a></li>
+        <li class="hnav"><a href="sprint2-core.html">Sprint 2 Core</a></li>
+        <li class="hnav"><a class="active" href="sprint3-tech.html">Sprint 3 Tech</a></li>
+        <li class="hnav"><a href="sprint3-core.html">Sprint 3 Core</a></li>
+        <ul>
+    </nav>
+    <main>
+    <!-- Page Content -->
+      <article>
+
+<h1>Javascript and the DOM</h1>
+<p>This week we've focused mainly on getting into Javascript, and seeing how we can build upon the work we did with CSS & HTML to integrate responsive web design.</p>
+<h2>HTML & CSS</h2>
+<p>An analogy I used previously in my reflections was to think of HTML as a herd of sheep (your content), and CSS as the sheepdog.</p>
+<p>The herd of cows in made up of a bunch of cows (elements). The sheepdog dictates how the cows behave by making sure they don't stray from the group. CSS determines a set of rules for element types which dictates how they are displayed.</p>
+
+<h2>Control Flow & Loops</h2>
+<p>Control flow could be thought of a set of procedures to follow - if a certain criteria is met. If we said that we would have a shower if we meet certain criteria - have just woken up or have been exercising. We might express it using Javascripts format for if conditionals like the following</p>
+<p>So if we have a couple of Booleans to denote whether we have showered 'showered' or just exercised 'justExercised', and the result will call the function 'shower()' if we need to, the following would express this evalution:</p>
+<h3>if (!showered || justExercised){shower()}</h3>
+<p>We can imagine that we could extend this example and have conditions that take into account the time of day and some function that will reset the 'showered' boolean once enough time has elapsed since showering.</p>
+<p>Loops work in a similar way, by evaluating some logical conditions under which a certain block of code within the loop will execute. This could be a set number of times, or until another base condition is met.</p>
+<p>If we used the analogy of a person going out for a drink with friends, but who wants to be resposible as they have work the next day. This person might have a set number of drinks they are going to allow themselves to have. We might express this with Javascript using a while loop:</p>
+<h3>while (drinksHad < 3 && !tooTired){haveADrink()}</h3>
+
+<h2>The Document Object Model</h2>
+<p>The Document Object Model (DOM) is an Application Programming Interface (API) implemented in Javascript that structures the HTML content as a tree of object 'Nodes' (elements). It provides us with a way to manipulate these elements using javascript to react to user input like prompts or cursor movement. The visual respresentation of your code in DevTools is essentially allowing you to see and manipulate the DOM. At its simplest, we can think of the DOM as simply an interface to an HTML document.</p>
+
+<h2>Arrays & Objects</h2>
+<p>The first 'object' type you will encounter in Javascript are <em>Arrays</em>. These are basically just a list of some items that we wish to access later. Using an analogy of a library or bookstore, an array could be a pile of books. If we wanted to buy 'I Hate the Internet' by Jarrett Kobek and it was the third book down the pile - we would express that in javascript using index notation (square brackets around the index number). The first index of arrays in javascript (and most languages - looking at you, <strong>R</strong>...) at 0):</p>
+<h3>var iHateTheInternet = pileOfBooks[2]</h3>
+<p>An object in javascript is similar to a list - it is often a custom class written for a specific purpose. The major difference with an array is that instead of having an ordered list with indexes to access, an object is made up of a set of key:value pairs, which can be different datatypes. We can access values using keys in this instance. If we took our bookseller analogy, an object might be something like an entry in the POS software - a book in the system would have attributes like an ISBN, a publisher, the books stockist, inventory quatity, price and other metadata. If we wanted to look up the price, and stock level of Bell Hooks - All About Love, we could do this in javascript:</p>
+<h3>var stock = AllAboutLove["stockLevel"] // Or we could use AllAboutLove.stockLevel</h3>
+<h3>var price = AllAboutLove["price"] // also AllAboutLove.price</h3>
+
+<h2>Functions</h2>
+<p>Functions allow us to encapsulate specific blocks of code that can be invoked using their name(). These are extremely powerful as they allow us to write code once that can be defined once, but used many times. Functions make code much more readable - we would typically set up our functions in one section of the code, and then the main section of our script would be much less cluttered, and program flow is much more obvious. We can extend our bookshop analogy to show how we might use a function to tally up a a customers' web order (an object with booksnames as keys and price as value) and invoice them correctly:</p>
+<h3>function tallyPrice(custBooks){</h3>
+<h3>var price = 0 // set up a tally</h3>
+<h3>for (i=0; i < custBooks.length; i++){price+=custBooks[i]}</h3>
+<h3>return price}</h3>
+<p>The Above function would accept a custBooks object and work through the index list adding prices to a local price total. When it had added all the prices it will return the total.</p>
+</article>
+
+</main> 
+<footer>
+
+</footer> 
+</body>
+</html>
