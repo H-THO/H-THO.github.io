@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem Solving Skills</title>
+    <meta charset="UTF-8">
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
+</head>
+  
+<body>
+    <!-- Header and horizontal nav bar -->
+    <header>
+        <h1>Hywel Thomas</h1> 
+    </header>
+    <nav>
+      <ul class="hnav">
+        <li class="hnav"><a href="../index.html">Home</a></li>
+        <li class="hnav"><a href="sprint1-core.html">Sprint 1 Core</a></li>
+        <li class="hnav"><a href="sprint2-tech.html">Sprint 2 Tech</a></li>
+        <li class="hnav"><a href="sprint2-core.html">Sprint 2 Core</a></li>
+        <li class="hnav"><a href="sprint3-tech.html">Sprint 3 Tech</a></li>
+        <li class="hnav"><a href="sprint3-core.html">Sprint 3 Core</a></li>
+        <li class="hnav"><a class="active" href="sprint4-tech.html">Sprint 4 Tech</a></li>
+        <li class="hnav"><a href="sprint4-core.html">Sprint 4 Core</a></li>
+        <ul>
+    </nav>
+    <main>
+    <!-- Page Content -->
+        <article>
+            <h1>Problem Solving Skills</h1>
+            <h2>Get Blocked</h2>
+            <p>
+            Sometimes getting blocked is unavoidable. It can be helpful to have a number of techniques or approaches to working through problems like this.
+            </p>
+            <p>
+            On sprint 4 I was blocked initially in the gradebook kata. I was unable to see how I was supposed to assign the scores correctly to the students within the gradebook.
+            I had tried a number of things already - I'd taken the problem and broken it down into steps and expressed this in pseudocode. 
+            The main issue was in my proposed method to solve the issue - I had sort of misunderstood that there were much simpler ways to solve it. 
+            </p>
+            <p>
+            My method was to assign the students by looping through the students, assigning the student objects to the gradebook, and then tried to add the scores to the students, while still in the for loop.
+            To me coming from some use of Python - I figured I should be able to assign the scores using something like pythons dict(zip()), and of course doing so all within one loop would be the most 'elegant' way of solving the problem.
+            I tried researching analogues of the dict(zip()) function implemented in javascript, which would've taken about 15 more lines of code. 
+            It also feels a bit hacky to work like this - not writing as the language of choice would dictate the style and methods for a solution. 
+            </p>
+            <p>
+            I tried to force a solution, trying to explain via <em>Rubber Duck</em> this way but came up with nothing - I couldn't access the students using index notation as they were objects (e.g. keys aren't indexed as in an array).
+            I was getting frustrated at this point, so i took a break to stretch and have a coffee. At this point I decided I'd try to find a different method of solution. 
+            After looking at the instructions again, I clicked.
+            </p>
+            <p> I wasn't required to do this all in one step, in fact I didn't have to use such a complex method to assign the student objects <em>or</em> the scores!
+            Once I realised this, I was able to assing them all correctly by just using object literal notation and accessing array indexes statically from here.
+            This was a question that was quite simple, but I'd managed to decide it was really difficult.
+            </p>
+            <p>
+            Sometimes it can be really helpful to step back out of a problem and reassess the needs of the problem, and think a bit more laterally about how we could solve it. 
+            It was like my brain had gotten 'stuck' on one narrow possibility.
+            </p>
+
+            <h2>Elegant Solutions?</h2>
+            <p>
+            Sometimes, we're "lucky" and a solution pops straight out to us. I would't call this that <em>elegant</em>, but I can't say that many <em>elegant</em> solutions came to me during the sprint 4 Kata.
+            </p>
+            In the Super Fizzbuzz kata, I wrote pseudocode to solve the problem, identifying 3 cases - where we would alter the array value to a string. When the number was: 
+            <ol>
+                <li>A factor of 3</li>
+                <li>A factor of 5</li>
+                <li>A factor of both 3 and 5</li>
+            </ol>
+            <p>
+            I could see that condition 3 was actually just both conditions 1 and 2. It then hit me I could this using only two conditionals and working with a placeholder 'answer' string.
+            See the code below:
+            </p>
+            <pre>
+                <code>
+                        function super_fizzbuzz (arr) {
+                            for (i=0; i < arr.length; i++){
+                              fzbz = ""
+                              if (arr[i] % 3 === 0){fzbz+="Fizz"}
+                              if (arr[i] % 5 === 0){fzbz+="Buzz"} 
+                              if (fzbz.length > 0){arr[i] = fzbz}
+                            }
+                          return arr
+                        }
+                </code>
+            </pre>
+            <p>
+            The process of solving that felt mostly unconcious and managed it way under the timebox allocation for the problem. I knew there were solutions for similar fizzbuzz challenges online but I wanted to have a go at it myself first.
+            I'd knew I'd actually done a fizzbuzz challenge when doing a python codeacademy course a few years ago, so I was able to understand generally how I might solve the problem
+            </p>
+            <p>
+            I knew I had to use the modulo operator (%), so I read the docs on it and used the <em>Rubber Duck</em> method to understand how I'd implement the pseudocode. 
+            It felt quite seemless to solve in this way, and I managed to come up with a solution I thought was fairly elegant. 
+            It still felt a little cheaty as I had come across fizzbuzz before. 
+            I did have a lot more blocks on the later challenges though, I think I was definitely a bit "lucky" here.
+            </p>
+
+        3. Reflect on how confident you feel using the problem solving techniques and process:
+
+            Pseudocode
+            Trying something
+            Rubber ducky method
+            Reading error messages
+            Console.logging
+            Googling
+            Asking your peers for help
+            Asking coaches for help
+            Improving your process with reflection
+
+        </article>
+
+    </main> 
+    <footer>
+    
+    </footer> 
+</body>
+</html>
